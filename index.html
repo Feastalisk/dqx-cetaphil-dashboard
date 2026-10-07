@@ -148,6 +148,7 @@ document.querySelectorAll('#pricing tbody tr').forEach(row=>{
  const cell=row.cells[0],name=cell.textContent;let file='',alt='';
  if(name.includes('CETA PRO AD MOIST')){file='cetaphil-pro-ad-moisturizer.png';alt='Cetaphil Pro AD Derma Moisturizer, representative 295ml packaging'}
  else if(name.includes('CETA BABY DAILY LOTION')){file='cetaphil-baby-lotion.png';alt='Cetaphil Baby Daily Lotion'}
+ else if(name.includes('CETA MOIST CREAM 50g')){file='cetaphil-moisturizing-cream-50g.avif';alt='Cetaphil Moisturizing Cream 50g'}
  else if(name.includes('CETA MOIST LOTION')){file='cetaphil-moisturising-lotion.png';alt='Cetaphil Moisturising Lotion, representative 473ml packaging'}
  if(file){const wrap=document.createElement('div');wrap.className='pricing-product';const img=document.createElement('img');img.src='assets/'+file;img.alt=alt;img.loading='lazy';const label=document.createElement('span');label.textContent=name;wrap.append(img,label);cell.replaceChildren(wrap)}
 });
